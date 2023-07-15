@@ -1,0 +1,49 @@
+{% extends "eportfolio/index.html" %}
+{% load static %}
+{% block body %}
+<section id="home" class="about-me">
+    <div class="container">
+        <div class="avatar">
+            <img class="img-fluid" src="{% static 'assets/img/rp.png' %}" alt="Rafał Protasiuk"
+                 title="Rafał Protasiuk">
+        </div>
+        <div class="col-12 mx-auto">
+            <div class="about-content">
+                <h1 class="my-3">About Me</h1>
+                <h3 class="my-5">Thank you for visiting my <strong>ePortfolio</strong>!</h3>
+                <h4 class="my-5">I am a beginner programmer from Poland. <i
+                        class="lni lni-python mr-1"></i><strong>Python</strong>
+                    is my favourite programming language. I am currently finishing <strong>&bdquo;CS50's Web
+                        Programming with Python and JavaScript&rdquo;</strong> <a class="links"
+                                                                                  href="https://online-learning.harvard.edu/course/cs50s-web-programming-python-and-javascript?delta=0"
+                                                                                  target="_blank" title="Go to course">course</a>
+                    from <strong>Harvard University</strong>.
+                    It is my sixth and the final project of this course. All details
+                    previous projects you find <a class="links" href="/my_projects" title="Go to projects">here</a>.
+                </h4>
+                <h4 class="mt-5 mb-3 font-weight-bolder">About Course</h4>
+                <h4>This course diving more deeply into the design and implementation of web applications with
+                    <strong>Python</strong>, <strong>JavaScript</strong>, and <strong>SQL</strong> using
+                     <strong>Django</strong> and <strong>Bootstrap</strong>.
+                </h4>
+                <div class="mt-5 d-flex justify-content-end">
+                    <div>
+                        <h4>Rafał Protasiuk</h4>
+                        <div class="social-links">
+                            <a href="https://studio.youtube.com/channel/UCLOMcAhiV0FXRWnyEOhqbpA/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D">
+                                <i class="lni lni-youtube" style="font-size: 32px"></i>
+                            </a>
+                            <a href="https://github.com/rafinder1">
+                                <i class="lni lni-github-original ml-2"style="font-size: 32px"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rafa%C5%82-protasiuk-466920170/">
+                                <i class="lni lni-linkedin-original ml-2"style="font-size: 32px"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

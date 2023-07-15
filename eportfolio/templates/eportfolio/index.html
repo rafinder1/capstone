@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>ePortfolio</title>
+	<meta name="description" content="Biography about user">
+	<meta name="keywords" content="cv, biography, experience, education, hobby">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'assets/css/LineIcons.2.0.css' %}">
+
+	<link rel="stylesheet" href="{% static 'assets/css/main5.css' %}" !important>
+
+    <title>ePortfolio</title>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-light bg-light navbar-expand-md">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/">
+            <img src="{% static 'assets/img/logo_cv.png' %}" width="64" height="37"
+                 class="d-inline-block align-bottom" alt=""> ePortfolio
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#main_menu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main_menu" style="color: black;">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'about_me' %}"> About Me </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'my_projects' %}"> My Projects </a>
+                </li>
+            </ul>
+            <div>
+                {% if user.is_authenticated %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-flex justify-content-end">
+                        <span class="nav-link">You are logged in as&nbsp;<strong
+                                style="color: #c82333">{{ user.username }}</strong>&nbsp;</span>
+                    </li>
+                    <li class="nav-item d-flex justify-content-end">
+                        <a class="nav-link" href="{% url 'logout' %}">Sign Out</a>
+                    </li>
+                </ul>
+                {% else %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'login' %}"> Log In </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                </ul>
+            {% endif %}
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="body">
+        {% block body %}
+        <div id="imageContainer">
+            <img src="{% static 'assets/img/home.png' %}" alt="">
+        </div>
+        <style>
+            #imageContainer
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 75vh;
+            }
+        </style>
+        {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+<!--    <script src="{% static 'assets/js/index2.js' %}"></script>-->
+</body>
+</html>

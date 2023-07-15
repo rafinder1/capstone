@@ -1,0 +1,55 @@
+{% extends "eportfolio/index.html" %}
+{% load static %}
+
+{% block body %}
+<div class="container">
+    <h4>Create Project</h4>
+    <button class='btn primary' type="button" id="btn-compose-project">
+        Create
+    </button>
+    <div id="form-container-compose-project">
+    </div>
+    <br>
+    {% for project in projects %}
+        <div class="modal-body bg-light small project-{{project.id}} project" data-project-id = {{project.id}}>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <button class="btn-more-info btn-info">More Information</button>
+
+            <div class="additional-info" style="display: none;">
+                <div class="my-3">
+                    <div class="small border-bottom">Author:</div>
+                    <div class="small font-weight-bolder">{{ project.author }}</div>
+                </div>
+                <div class="my-3">
+                    <div class="small border-bottom">Description:</div>
+                    <div class="small font-weight-bolder">{{ project.description }}</div>
+                </div>
+                <div class="my-3">
+                    <div class="small border-bottom">URL Requirements:</div>
+                    {% if project.requirements %}
+                    <a href="{{ project.requirements }}" class="small links" title="Go to Requirements" target="_blank">{{ project.requirements }}</a>
+                    {% else %}
+                    <div class="small"><em>No link to the requirements</em></div>
+                    {% endif %}
+                </div>
+                <div class="my-3">
+                    <div class="small border-bottom">Technologies:</div>
+                    <div class="small font-weight-bolder">{{ project.technology }}</div>
+                </div>
+                <div class="my-3">
+                    <div class="small border-bottom">URL Video:</div>
+                    {% if project.video %}
+                    <a href="{{ project.video }}" title="Show Video" class="small links" target="_blank" class="play-btn" data-vbtype="video"
+                       data-autoplay="true">{{ project.video }}</a>
+                    {% else %}
+                        <div class="small"><em>No link to the video</em></div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+    <script src="{% static 'assets/js/index3.js' %}"></script>
+</div>
+{% endblock %}
