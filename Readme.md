@@ -3,6 +3,9 @@
 Final Project from Edx | Harvard CS50's Web Programming with Python and JavaScript Course. 
 [Specification](https://cs50.harvard.edu/web/2020/projects/final/capstone/)
 
+## [Certificate of Completion](https://courses.edx.org/certificates/0d9864716ffc45f48a4388e78a4e5d64)
+
+
 ### Description
 
 __EPortfolio__ is a responsive, dynamic and most advanced web application that summarizes all my CS50's Web Programming 
