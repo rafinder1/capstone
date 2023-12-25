@@ -3,11 +3,40 @@
 Final Project from Edx | Harvard CS50's Web Programming with Python and JavaScript Course. 
 [Specification](https://cs50.harvard.edu/web/2020/projects/final/capstone/)
 
+### Description
+
+__EPortfolio__ is a responsive, dynamic and most advanced web application that summarizes all my CS50's Web Programming 
+with Python and JavaScript projects in one place. My application uses the Django plugin in Bootstrap mode. 
+This application cost me the most work and was the most difficult to do. Anyone can see information about me, the course, 
+and all my course projects. The EPortfolio application allows you to see the requirements of individual projects 
+and watch a YouTube video showing them in action.
+
 
 #### You can find a recording of my project on YouTube [here](https://youtu.be/YHsZMq5X5Dg)
 
 ![img.png](img/img.png)
 
+## Project Overview
+
+The final project incorporates elements from the following projects completed during the course:
+
+### 0. [Project 0 - Google Search](https://github.com/rafinder1/search)
+   - Design a front-end for Google Search, Google Image Search, and Google Advanced Search.
+
+### 1. [Project 1 - Wikipedia-like Online Encyclopedia](https://github.com/rafinder1/wiki)
+   - Develop an online encyclopedia akin to Wikipedia, with features for searching, editing, and creating new entries.
+
+### 2. [Project 2 - eBay-like E-commerce Auction Site](https://github.com/rafinder1/commerce)
+   - Create an eBay-like auction site enabling users to post listings, place bids, comment, and manage a watchlist.
+
+### 3. [Project 3 - Email Client Front-end](https://github.com/rafinder1/mail)
+   - Design the front-end of an email client that utilizes API calls to send and receive emails.
+
+### 4. [Project 4 - Twitter-like Social Network](https://github.com/rafinder1/network)
+   - Develop a social network website with features for making posts and following other users.
+
+### 5. Project 5 - Custom Web Application
+   - Design and implement a custom web application using Python and JavaScript.
 
 ### Installation
 Windows:
@@ -46,14 +75,6 @@ You should see a message saying that everything was installed.
    ```
 3. In your Web browser use a URL: __http://127.0.0.1:8000/__
 
-
-### Description
-
-__EPortfolio__ is a responsive, dynamic and most advanced web application that summarizes all my CS50's Web Programming 
-with Python and JavaScript projects in one place. My application uses the Django plugin in Bootstrap mode. 
-This application cost me the most work and was the most difficult to do. Anyone can see information about me, the course, 
-and all my course projects. The EPortfolio application allows you to see the requirements of individual projects 
-and watch a YouTube video showing them in action.
 
 #### Distinctiveness and Complexity
 The idea was to create a website for a EPortfolio which would be responsive to mobile and desktop designs, 
